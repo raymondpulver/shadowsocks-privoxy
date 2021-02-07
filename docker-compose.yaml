@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  shadowsocks:
+    ports:
+      - "127.0.0.1:8118:8118"
+    image: raymondpulver/shadowsocks-libev
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - SS_SERVER=${SS_SERVER}
+      - SS_PORT=${SS_PORT}
+      - SS_METHOD=chacha20-ietf-poly1305
+      - SS_PASSWORD=${SS_PASSWORD}
+      - SS_PLUGIN_OPTS=mode=quic;host=${SS_SERVER}
+    restart: always

@@ -1,0 +1,12 @@
+{ 
+  "server": "$SS_SERVER",
+  "server_port": "$SS_PORT",
+  "local_address": "0.0.0.0",
+  "local_port": 7070,
+  "password": "$SS_PASSWORD",
+  "plugin": "/usr/local/bin/v2ray-plugin",
+  "plugin_opts": "$SS_PLUGIN_OPTS",
+  "timeout": 300,
+  "method": "$SS_METHOD",
+  "fast_open": false
+}
